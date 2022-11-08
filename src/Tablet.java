@@ -1,20 +1,20 @@
 public class Tablet extends MedicineCompany {
-    String additionalInfo;
+    private String additionalInfo;
 
-    Tablet(String companyName, String[] companyAddresses) {
+    public Tablet(String companyName, String[] companyAddresses) {
         super(companyName, companyAddresses);
         this.additionalInfo = "store in a cool dry place";
 
     }
 
     @Override
-    void displayLabels() {
-        System.out.println("Company name:   " + this.companyName + "\n"
+    public void displayLabels() {
+        System.out.println("Company name:   " + super.getCompanyName() + "\n"
                 + "Company address:  " + "\n"
-                + companyAddresses[0] + "\n"
-                + companyAddresses[1] + "\n"
-                + companyAddresses[2] + "\n"
-                + companyAddresses[3] + "\n"
+                + super.getCompanyAddresses()[0] + "\n"
+                + super.getCompanyAddresses()[1] + "\n"
+                + super.getCompanyAddresses()[2] + "\n"
+                + super.getCompanyAddresses()[3] + "\n"
                 + "Additional Information:   " + this.additionalInfo);
     }
 }

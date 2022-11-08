@@ -1,18 +1,18 @@
 public class Syrup extends MedicineCompany {
-    String additionalInfo;
+    private String additionalInfo;
 
-    Syrup(String companyName, String[] companyAddresses) {
+    public Syrup(String companyName, String[] companyAddresses) {
         super(companyName, companyAddresses);
         this.additionalInfo = "Shake well before use";
     }
     @Override
-    void displayLabels() {
-        System.out.println("Company name:   " + this.companyName + "\n"
+    public void displayLabels() {
+        System.out.println("Company name:   " + super.getCompanyName() + "\n"
                 + "Company address:  " + "\n"
-                + companyAddresses[0] + "\n"
-                + companyAddresses[1] + "\n"
-                + companyAddresses[2] + "\n"
-                + companyAddresses[3]+"\n"
+                + super.getCompanyAddresses()[0] + "\n"
+                + super.getCompanyAddresses()[1] + "\n"
+                + super.getCompanyAddresses()[2] + "\n"
+                + super.getCompanyAddresses()[3] + "\n"
                 +"Additional Information:   "+this.additionalInfo );
     }
 }
